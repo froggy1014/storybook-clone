@@ -2,11 +2,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "storybook build --docs",
+    "start": "serve storybook-static",
+    "start:local": "serve storybook-static -p 6006",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook start -p 6006 -s public",
+    "build-storybook": "storybook build --docs",
+    "serve-storybook": "serve storybook-static"
   },
   "dependencies": {
     "next": "14.2.2",
